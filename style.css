@@ -1,0 +1,42 @@
+:root {
+  /* Fonts */
+  --header-font: "Montserrat", sans-serif;
+  --body-font: "Montserrat", sans-serif;
+
+  /* Kronicle color palette */
+  --orange: #ff7d1a;
+  --darker-orange: #eb6701;
+  --peach: #fedbcd;
+  --background: #fffaf8;
+  --light-beige: #f8ece8;
+
+  /* Border radius */
+  --border-radius-xxs: 6px;
+  --border-radius-xs: 8px;
+  --border-radius-s: 12px;
+  --border-radius-m: 24px;
+  --border-radius-l: 32px;
+  --border-radius-xl: 42px;
+  --border-radius-xxl: 54px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: black;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  background-color: var(--darker-orange);
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
