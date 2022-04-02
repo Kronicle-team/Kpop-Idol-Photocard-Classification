@@ -20,26 +20,14 @@
   --border-radius-xxl: 54px;
 }
 
+body {
+  background-image: url("media/images/banner.png");
+}
+
 h1 {
   font-size: 2.5rem;
   color: black;
   text-align: center;
-}
-
-.banner {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.bannerBackground {
-  width: 100%;
-  position: absolute;
-}
-
-.bannerTextWrapper {
-  width: 100%;
-  height: auto;
 }
 
 button {
