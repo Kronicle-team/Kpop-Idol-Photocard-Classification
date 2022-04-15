@@ -48,7 +48,7 @@ def photocard_classification(img, file):
     return np.argmax(prediction)
 
 
-st.title("photocards Classification with Kronicle")
+st.title("Photocard Classification - Kronicle")
 st.header("SEVENTEEN")
 st.text("Upload a photocard to classify")
 # file upload and handling logic
@@ -59,7 +59,7 @@ if uploaded_file is not None:
     st.image(image, caption='Uploaded a photocard.', use_column_width=True)
     st.write("")
     st.write("Classifying a photocard .........hold tight")
-    label = photocard_classification(image, '../models/keras/keras_model.h5')
+    label = photocard_classification(image, 'keras_model.h5')
     if label == 0:
         st.write("This photocard looks like SEVENTEEN Attacca Album photocards.")
     elif label == 1:
@@ -72,3 +72,12 @@ if uploaded_file is not None:
         st.write("This photocard looks like SEVENTEEN Incomplete 2021 trading cards.")
     elif label == 5:
         st.write("Oops! This is not a SEVENTEEN trading cards.")
+#
+#
+# hide_streamlit_style = """
+#             <style>
+#             #MainMenu {visibility: hidden;}
+#             footer {visibility: hidden;}
+#             </style>
+#             """
+# st.markdown(hide_streamlit_style, unsafe_allow_html=True)  # hide streamlit style
