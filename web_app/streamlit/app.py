@@ -2,10 +2,17 @@ import streamlit as st
 from PIL import Image
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.optimizers import RMSprop
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from PIL import Image, ImageOps
 import numpy as np
+# from streamlit_webrtc import webrtc_streamer
+
+
+# config function
+st.set_page_config(page_title="Kronicle", page_icon='assets/logo.jpg', layout="wide")
+
+# add styling
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
 def photocard_classification(img, file):
@@ -44,7 +51,7 @@ def photocard_classification(img, file):
 
     # run the inference
     prediction = model.predict(data)
-    #print(prediction)
+    # print(prediction)
     return np.argmax(prediction)
 
 
@@ -55,7 +62,7 @@ st.text("Upload a photocard to classify")
 uploaded_file = st.file_uploader("Choose a photocard", type=["jpg", "png", "jpeg"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert('RGB')
-#image = Image.open(img_name).convert('RGB')
+    # image = Image.open(img_name).convert('RGB')
     st.image(image, caption='Uploaded a photocard.', use_column_width=True)
     st.write("")
     st.write("Classifying a photocard .........hold tight")
@@ -72,12 +79,12 @@ if uploaded_file is not None:
         st.write("This photocard looks like SEVENTEEN Incomplete 2021 trading cards.")
     elif label == 5:
         st.write("Oops! This is not a SEVENTEEN trading cards.")
-#
-#
-# hide_streamlit_style = """
-#             <style>
-#             #MainMenu {visibility: hidden;}
-#             footer {visibility: hidden;}
-#             </style>
-#             """
-# st.markdown(hide_streamlit_style, unsafe_allow_html=True)  # hide streamlit style
+
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)  # hide streamlit style
