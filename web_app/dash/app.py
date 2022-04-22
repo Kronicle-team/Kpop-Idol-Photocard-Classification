@@ -102,6 +102,7 @@ def display_graphs(n_clicks):
     )
     return new_child
 
+
 # read the data from cleaned_data.csv which is a clean file
 df = pd.read_csv("cleaned_data.csv", sep=',')
 

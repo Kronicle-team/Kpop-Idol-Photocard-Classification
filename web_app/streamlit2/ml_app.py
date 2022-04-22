@@ -12,7 +12,6 @@ warnings.filterwarnings(action='ignore', category=DataConversionWarning)
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
-
 def run_ml_app():
     st.sidebar.header('User Input Features')
 

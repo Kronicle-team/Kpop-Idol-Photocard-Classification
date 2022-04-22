@@ -1,11 +1,7 @@
 import streamlit as st
-from PIL import Image
-import tensorflow as tf
 from tensorflow import keras
 from PIL import Image, ImageOps
 import numpy as np
-# from streamlit_webrtc import webrtc_streamer
-
 
 # config function
 st.set_page_config(page_title="Kronicle", page_icon='assets/logo.jpg', layout="wide")
@@ -79,7 +75,6 @@ if uploaded_file is not None:
         st.write("This photocard looks like SEVENTEEN Incomplete 2021 trading cards.")
     elif label == 5:
         st.write("Oops! This is not a SEVENTEEN trading cards.")
-
 
 hide_streamlit_style = """
             <style>
