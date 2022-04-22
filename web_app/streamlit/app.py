@@ -58,7 +58,6 @@ st.text("Upload a photocard to classify")
 uploaded_file = st.file_uploader("Choose a photocard", type=["jpg", "png", "jpeg"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert('RGB')
-    # image = Image.open(img_name).convert('RGB')
     st.image(image, caption='Uploaded a photocard.', use_column_width=True)
     st.write("")
     st.write("Classifying a photocard .........hold tight")
