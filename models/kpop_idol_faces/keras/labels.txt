@@ -7,3 +7,8 @@
 6 Seungri_Big_Bang
 7 Taeyang_Big_Bang
 8 Daesung_Big_Bang
+9 Seventeen_S.Coups
+10 Seventeen_Jeonghan
+11 Seventeen_Joshua
+12 Seventeen_Hoshi
+13 Seventeen_Wonwoo
